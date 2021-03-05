@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Post = (props) => {
-    return(
+    return (
         <div className="artikel">
             <div className="gambar-artikel">
-                <img src="http://placeimg.com/80/80/tech" alt="Gambar Tumbnail Artikel"/>
+                <img src="http://placeimg.com/640/480/nature" alt="Gambar Tumbnail Artikel"/>
             </div>
             <div className="konten-artikel">
                 <div className="judul-artikel">{props.judul}</div>
