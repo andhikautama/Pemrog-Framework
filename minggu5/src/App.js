@@ -1,4 +1,4 @@
-import React from 'react';
+import Raect from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -7,8 +7,6 @@ import {
     Redirect,
     useHistory,
     useLocation
-    // useParams,
-    // useRouteMatch
 } from "react-router-dom";
 
 export default function AuthExample() {
@@ -17,7 +15,12 @@ export default function AuthExample() {
         <
         div >
         <
+        Switch >
+
+        <
         AuthButton / >
+        <
+        /Switch>
 
         <
         ul >
@@ -30,26 +33,12 @@ export default function AuthExample() {
         <
         Link to = "/private" > Private Page < /Link> <
         /li> <
-        /ul>
-
-        <
+        /ul> <
         Switch >
         <
-        Route path = "/public" >
-        <
-        PublicPage / >
-        <
-        /Route> <
-        Route path = "/login" >
-        <
-        LoginPage / >
-        <
-        /Route> <
-        PrivateRoute path = "/private" >
-        <
-        ProtectedPage / >
-        <
-        /PrivateRoute> <
+        Route path = "/public" > < PublicPage / > < /Route> <
+        Route path = "/login" > < LoginPage / > < /Route> <
+        PrivateRoute path = "/private" > < ProtectedPage / > < /PrivateRoute> <
         /Switch> <
         /div> <
         /Router>
@@ -79,8 +68,7 @@ function AuthButton() {
                 fakeAuth.signout(() => history.push("/"));
             }
         } >
-        Sign Out <
-        /button> <
+        Sign Out < /button> <
         /p>
     ) : ( <
         p > You are not logged in . < /p>
@@ -113,20 +101,18 @@ function PublicPage() {
 }
 
 function ProtectedPage() {
-    return <h3 > Private < /h3>;
+    return <h3 > Private < /h3>
 }
 
 function LoginPage() {
     let history = useHistory();
     let location = useLocation();
-
     let { from } = location.state || { from: { pathname: "/" } };
     let login = () => {
         fakeAuth.authenticated(() => {
             history.replace(from);
         });
     };
-
     return ( <
         div >
         <
@@ -135,176 +121,119 @@ function LoginPage() {
         /div>
     );
 }
-//export default function NestingExample
-//   return(
-//     <Router>
-//     <div>
-//     <ul>
-//     <li>
-//     <Link to="/">Home</Link>
-//     </li>
-//     <li>
-//     <Link to="/topics">Topics</Link>
-//     </li>
-//     </ul>
-//     <hr />
 
-//     <Switch>
-//       <Route exact path="/"><Home /></Route>
-//       <Route path="/topics"><Topics /></Route>
-//     </Switch>
-//     </div>
-//     </Router>
-//   );
-// }
-// function Home(){
-//   return(
-//     <div>
-//       <h2>Home</h2>
-//     </div>
-//   );
-// }
-// function Topics(){
-//   let { path, url} = useRouteMatch();
-//   return (
-//     <div>
-//       <h2>Topics</h2>
-//       <ul>
-//         <li>
-//           <Link to={`${url}/Sate, Nasi Goreng`}>Kuliner</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/Wisata alam, museum`}>Travelling</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/Ibis, JW Marriot`}>Review Hotel</Link>
-//         </li>
-//       </ul>
-//       <Switch>
-//         <Route exact path={path}>
-//           <h3>Please select a topic.</h3>
-//         </Route>
-//         <Route path={`${path}/:topicId`}><Topic /></Route>
-//       </Switch>
-//     </div>
-//   );
-// }
-// function Topic(){
-//   let { topicId } = useParams();
-//   return(
-//     <div>
-//       <h3>{topicId}</h3>
-//     </div>
-//   );
-// }
-// export default function ParamsExample(){
-//   return (
-//     <Router>
-//       <div>
-//         <h2>Accounts</h2>
-//         <ul>
-//           <li>
-//             <Link to="/netflix">Netflix</Link>
-//           </li>
-//           <li>
-//             <Link to="/gmail">Gmail</Link>
-//           </li>
-//           <li>
-//             <Link to="/yahoo">Yahoo</Link>
-//           </li>
-//           <li>
-//             <Link to="/amazon">Amazon</Link>
-//           </li>
-//         </ul>
-//         <Switch>
-//           <Route path="/:id" children={<Child />} />
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
 
-// function Child(){
-//   let { id } = useParams();
-//     return(
-//       <div>
-//         <h3>ID : {id}</h3>
-//       </div>
-//     )
-
-// }
-
-// export default function BasicExample(){
-//   return(
-//     <Router>
-//       <div>
-//         <ul>
-//           <li>
-//             <Link to="/">Home</Link>
-//           </li>
-//           <li>
-//           <Link to="/about">About</Link>
-//           </li>
-//           <li>
-//           <Link to="/dashboard">Dashboard</Link>
-//           </li>
-//         </ul>
-//         <hr />
-//         <Switch>
-//           <Route exact path="/">
-//             <Home />
-//           </Route>
-//           <Route exact path="/about">
-//             <About />
-//           </Route>
-//           <Route exact path="/dashboard">
-//             <Dashboard />
-//           </Route>
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
-// function Home(){
-//   return(
-//     <div>
-//       <h2>Home</h2>
-//     </div>
-//   );
-// }
-// function About(){
-//   return(
-//     <div>
-//       <h2>About</h2>
-//     </div>
-//   );
-// }
-// function Dashboard(){
-//   return(
-//     <div>
-//       <h2>Dashboard</h2>
-//     </div>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-//}
-//}
+/*export default function NestingExample(){
+     return(
+       <Router>
+         <div>
+           <ul>
+             <li>
+               <Link to="/">Home</Link>
+             </li>
+             <li>
+               <Link to="/topics">Topics</Link>
+             </li>
+           </ul>
+           <hr/>
+  
+           <Switch>
+             <Route exact path="/">
+               <Home/>
+             </Route>
+             <Route path="/topics">
+               <Topics/>
+             </Route>
+           </Switch>
+         </div>
+       </Router>
+     );
+   }
+  
+   function Home(){
+     return(
+       <div>
+         <h2>Home</h2>
+       </div>
+     )
+   }
+  
+   function Topics(){
+     let {path,url} = useRouteMatch();
+     return(
+       <div>
+         <h2>Topics</h2>
+         <ul>
+           <li>
+             <Link to={`${url}/Sate, Nasi goreng`}>Kuliner</Link>
+           </li>
+           <li>
+             <Link to={`${url}/Wisata alam, Nasi Museum`}>Travelling</Link>
+           </li>
+           <li>
+             <Link to={`${url}/Ibis, JW Marriot`}>Review Hotel</Link>
+           </li>
+         </ul>
+  
+         <Switch>
+           <Route exact path={path}>
+             <h3>Please select a topic.</h3>
+           </Route>
+           <Route path={`${path}/:topicId`}>
+             <Topic/>
+           </Route>
+         </Switch>
+       </div>
+     );
+   }
+  
+   function Topic(){
+     let {topicId} = useParams();
+  
+     return(
+       <div>
+         <h3>{topicId}</h3>
+       </div>
+     );
+   }
+  
+function Child(){
+  let { id } = useParams();
+  return (
+    <div>
+      <h3>ID: {id}</h3>
+    </div>
+  );
+}  
+// Halaman konten
+//function NetFlix(){
+ 
+ 
+ 
+  return(
+    <div>
+      <h2>NetFlix</h2>
+    </div>
+  );
+}
+function Gmail(){
+  return(
+    <div>
+      <h2>Gmail</h2>
+    </div>
+  );
+}
+function Yahoo(){
+  return(
+    <div>
+      <h2>Yahoo</h2>
+    </div>
+  );
+}
+function Amazon(){
+  return(
+    <div>
+      <h2>Amazon</h2>
+    </div>
+  );
+} */
