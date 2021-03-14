@@ -78,13 +78,13 @@ class MahasiswaBlogPost extends Component{
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label htmlFor="alamat" className="col-sm-2 col-form-label">alamat</label>
+                    <label htmlFor="alamat" className="col-sm-2 col-form-label">Alamat</label>
                     <div className="col-sm-10">
                         <textarea className="form-control" id="alamat" name="alamat" onChange={this.handleTambahMahasiswa}></textarea>
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label htmlFor="hp" className="col-sm-2 col-form-label">hp</label>
+                    <label htmlFor="hp" className="col-sm-2 col-form-label">HP</label>
                     <div className="col-sm-10">
                         <input className="form-control" type="number" id="hp" name="hp" onChange={this.handleTambahMahasiswa}></input>
                     </div>
