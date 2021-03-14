@@ -6,7 +6,7 @@ class Contact extends Component {
             div >
             <
             h2 > Contact < /h2> <
-            p > Email: jualbajumerk @gmail.com < /p> <
+            p > Email: jualbajumerkdimalang @gmail.com < /p> <
             p > Phone: 08123456789 < /p> <
             p > Instagram: @jualbajumerkdimalang < /p> <
             /div>

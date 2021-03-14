@@ -71,7 +71,7 @@ function AuthButton() {
 
     return fakeAuth.isAuthenticated ? ( <
         p >
-        Welcome Bos!{
+        Welcome!{
             /* {" "}
                 <button
                   onClick={() => {

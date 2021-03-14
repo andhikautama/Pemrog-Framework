@@ -12,8 +12,8 @@ class Main extends Component {
             <
             div >
             <
-            h1 className = "title" > Utapes Store < /h1> <
-            h3 className = "subtitle" > Penggila Sneakers Wajib Beli Disini! < /h3> <
+            h1 className = "title" > Baju Merk di Malang < /h1> <
+            h3 className = "subtitle" > Penggila Baju Merk Wajib Mampir! < /h3> <
             ul className = "header" >
             <
             li > < NavLink to = "/" > App < /NavLink></li >
