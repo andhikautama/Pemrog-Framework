@@ -1,0 +1,77 @@
+{
+    "televisi": [{
+            "id": 1,
+            "nama": "Samsung Curved TV 49 Inch",
+            "harga": 8254000,
+            "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-3709910/samsung_samsung-49ru7300-49-inch-uhd-4k-smart-curved-tv-ua49ru7300_full03.jpg",
+            "stok": 3
+        },
+        {
+            "id": 2,
+            "nama": "Sony LED TV 32 Inch",
+            "harga": 3000000,
+            "gambar": "https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2020/07/2.-Sony-LED-TV-32-Inch-420x420.jpg",
+            "stok": 3
+        },
+        {
+            "id": 3,
+            "nama": "COOCAA 40 inch Smart TV",
+            "harga": 3099000,
+            "gambar": "https://migadget.id/wp-content/uploads/2020/09/COOCAA-40S6G-LED-TV-40-inch.jpg",
+            "stok": 3
+        },
+        {
+            "id": 4,
+            "nama": "TCL Android Smart TV 43 Inch",
+            "harga": 3799000,
+            "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//93/MTA-4362816/tcl_tcl_43a8_smart_tv_-_43_inch-4k-_uhd-_android_-_full01_k2nbqqtj.jpg",
+            "stok": 3
+        },
+        {
+            "id": 5,
+            "nama": "Smart TV LG 43LN5600",
+            "harga": 3750000,
+            "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-7890465/lg_led_tv__lg_43ln5600_pta_full01_j727gbi3.jpg",
+            "stok": 3
+        },
+        {
+            "id": 6,
+            "nama": "Smart TV Samsung 43TU6900",
+            "harga": 4399000,
+            "gambar": "https://images.tokopedia.net/img/cache/500-square/product-1/2020/9/18/4476598/4476598_fb0064a7-6a66-473a-b709-e443bafff32d_900_900?ect=4g",
+            "stok": 3
+        },
+        {
+            "id": 7,
+            "nama": "POLYTRON PLD32T711 TY TV",
+            "harga": 2399900,
+            "gambar": "https://cf.shopee.co.id/file/3f4ee7569b932033aea13823d3d85aae",
+            "stok": 3
+        },
+        {
+            "id": 8,
+            "nama": "Xiaomi Mi TV 4 55 Inch",
+            "harga": 5899000,
+            "gambar": "https://www.sinarmaju.co.id/image/cache/catalog/new_product/xiaomi/mi%20tv%204%2055-550x550.PNG",
+            "stok": 3
+        },
+        {
+            "id": 9,
+            "nama": "Changhong 75 Inch 4K UHD",
+            "harga": 17299000,
+            "gambar": "https://myhartono.com/images/detailed/289/U75H9.jpg",
+            "stok": 3
+        },
+        {
+            "id": 10,
+            "nama": "AQUA LED TV 40 Inch",
+            "harga": 2624000,
+            "gambar": "https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/tvs/AQUA_40_in_LE24AQT8300/AQUA_40_in_LE24AQT8300_L_1.jpg",
+            "stok": 3
+        }
+    ],
+    "comments": [],
+    "profile": {
+        "name": "typicode"
+    }
+}
