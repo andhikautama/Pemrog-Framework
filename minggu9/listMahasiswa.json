@@ -1,0 +1,20 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": 1841720092,
+      "nama": "Andhika Utama",
+      "alamat": "Jl. Soekarno Hatta No. 9 Malang",
+      "hp": "088219227387",
+      "angkatan": 2018,
+      "status": "aktif"
+    },
+    {
+      "NIM": 1841720099,
+      "nama": "Nggono",
+      "alamat": "Jl. Kehidupan menuju keabadian",
+      "hp": "08123456789",
+      "angkatan": 2020,
+      "status": "Hampir Lulus"
+    }
+  ]
+}
