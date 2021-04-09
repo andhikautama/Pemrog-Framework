@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './MahasiswaBlogPost.css';
 import MahasiswaPost from './MahasiswaPost'
+import API from '../../Services/index';
 
 class MahasiswaBlogPost extends Component{
     state = {
@@ -17,24 +18,23 @@ class MahasiswaBlogPost extends Component{
     };
 
     ambilDataDariServerAPI = () =>{
-        fetch('http://localhost:3002/mahasiswa')
-        .then(response => response.json())
-        .then(jsonHasilAmbilDariAPI => {
+        API.getNewsMahasiswa()
+        .then(result => {
             this.setState({
-                listMahasiswa: jsonHasilAmbilDariAPI
+                listMahasiswa: result
             })
         })
-    }
+    };
 
     componentDidMount(){
         this.ambilDataDariServerAPI()
     }
 
     handleHapusMahasiswa = (data) => {
-        fetch(`http://localhost:3002/mahasiswa/${data}`, {method: 'DELETE'})
-            .then(res => {
-                this.ambilDataDariServerAPI()
-            })
+        API.deleteNewsMahasiswa(data)
+        .then((response) => {
+            this.ambilDataDariServerAPI();
+        });
     }
 
     handleTambahMahasiswa = (event) => {
@@ -48,16 +48,9 @@ class MahasiswaBlogPost extends Component{
             }
 
             handleTombolSimpan = () => {
-                fetch('http://localhost:3002/mahasiswa', {
-                    method: 'post',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(this.state.insertMahasiswa)
-                })
-                    .then((Response) => {
-                        this.ambilDataDariServerAPI();
+                API.postNewsMahasiswa(this.state.insertMahasiswa)
+                .then((response) => {
+                    this.ambilDataDariServerAPI();
                 });
             }
 

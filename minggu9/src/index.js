@@ -4,11 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import BlogPost from './container/BlogPost/BlogPost';
-//import MahasiswaBlogPost from './container/BlogPost/MahasiswaBlogPost';
+// import BlogPost from './container/BlogPost/BlogPost';
+import MahasiswaBlogPost from './container/BlogPost/MahasiswaBlogPost';
 
-ReactDOM.render( <
-    BlogPost / > ,
+ReactDOM.render( < MahasiswaBlogPost / > ,
     document.getElementById('content')
 );
 

@@ -53,10 +53,18 @@ const getNewsBlog = () => GetAPI('posts?_sort=id&_order=desc');
 const postNewsBlog = (dataYgDikirim) => PostAPI('posts', dataYgDikirim);
 const deleteNewsBlog = (dataYgDihapus) => DeleteAPI('posts', dataYgDihapus);
 
+const getNewsMahasiswa = () => GetAPI('mahasiswa?_sort=id&_order=desc');
+const postNewsMahasiswa = (dataYgDikirim) => PostAPI('mahasiswa', dataYgDikirim);
+const deleteNewsMahasiswa = (dataYgDihapus) => DeleteAPI('mahasiswa', dataYgDihapus);
+
 const API = {
     getNewsBlog,
     postNewsBlog,
     deleteNewsBlog,
+
+    getNewsMahasiswa,
+    postNewsMahasiswa,
+    deleteNewsMahasiswa
 };
 
 export default API;
